@@ -1,6 +1,6 @@
 from minecraft.location import as_loc
 
-def pickFuel():
+def pickUpFuel():
   agent.collect("bucket")
   pass
 
