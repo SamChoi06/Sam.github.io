@@ -5,8 +5,7 @@ def pickFuel():
   pass
 
 def placeFuel():
-  check = 
-  [as_loc(1081, 45, -230), as_loc(1086, 45, -230), as_loc(1091, 45, -230)]
+  check = [as_loc(1081, 45, -230), as_loc(1086, 45, -230), as_loc(1091, 45, -230)]
   canPlace = False
 
   for c in check:
