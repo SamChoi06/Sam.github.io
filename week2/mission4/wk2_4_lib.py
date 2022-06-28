@@ -15,7 +15,7 @@ def pickSignal(direction: enums.Direction):
 def placeSignal(direction: enums.Direction):
   count_1 = agent.get_item_count(1)
   count_2 = 0
-  if (agent.get_item(1) == 'end_rod'):
+  if (agent.get_item(1) == 'end rod'):
     if (agent.get_item_count(1) > 0):
       agent.place(1, direction)
       count_2 = count_1 -1
@@ -27,6 +27,6 @@ def placeSignal(direction: enums.Direction):
       player.whisper('I don\'t have signal transmitter to place!')
     pass
   else:
-    player.whisper('I don\'t have signal transmitter to place!')
+    player.whisper('I don\'t know how to place!')
     pass
 
