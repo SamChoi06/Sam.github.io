@@ -36,41 +36,41 @@ def checkBlockFromAgent(block, direction: enums.Direction):
   return world.is_block(checkLoc, block)
 
 def pickReceiver(direction: enums.Direction):
-  if checkBlockFromAgent('red_concrete', direction):
+  if checkBlockFromAgent('redstone_block', direction):
     agent.destroy(direction)
     
     count = 0
-    if agent.get_item(1) == 'concrete':
+    if agent.get_item(1) == 'redstone_block':
       count = agent.get_item_count(1)
     
-    agent.give(('concrete', 14, ""), count + 1, 1)
+    agent.give(('redstone_block'), count + 1, 1)
 
-  if checkBlockFromAgent('blue_concrete', direction):
+  if checkBlockFromAgent('lapis_block', direction):
     agent.destroy(direction)
     
     count = 0
-    if agent.get_item(2) == 'concrete':
+    if agent.get_item(2) == 'lapis_block':
       count = agent.get_item_count(2)
     
-    agent.give(('concrete', 11, ""), count + 1, 2)
+    agent.give(('lapis_block'), count + 1, 2)
 
-  if checkBlockFromAgent('green_concrete', direction):
+  if checkBlockFromAgent('emerald_block', direction):
     agent.destroy(direction)
     
     count = 0
-    if agent.get_item(3) == 'concrete':
+    if agent.get_item(3) == 'emerald_block':
       count = agent.get_item_count(3)
     
-    agent.give(('concrete', 13, ""), count + 1, 3)
+    agent.give(('emerald_block', 13, ""), count + 1, 3)
 
-  if checkBlockFromAgent('yellow_concrete', direction):
+  if checkBlockFromAgent('gold_block', direction):
     agent.destroy(direction)
     
     count = 0
-    if agent.get_item(4) == 'concrete':
+    if agent.get_item(4) == 'gold_block':
       count = agent.get_item_count(4)
     
-    agent.give(('concrete', 4, ""), count + 1, 4)
+    agent.give('gold_block', count + 1, 4)
 
 def canPlaceReceiver(slot: int):
   if (agent.get_item(slot) == 'concrete'):
