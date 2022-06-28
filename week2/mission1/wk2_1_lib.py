@@ -1,6 +1,6 @@
 from minecraft.location import as_loc
 
-def pickFuel():
+def pickUpFuel():
   agent.collect("bucket")
   pass
 
@@ -14,11 +14,17 @@ def placeFuel():
           break
 
   if (canPlace == True):
-      if (agent.get_item_count(1) > 0 and agent.get_item(1) == 'bucket'):
+    count_1 = agent.get_item_count(1)
+    count_2 = 0
+    if (agent.get_item_count(1) > 0 and agent.get_item(1) == 'bucket'):
           agent.give('lava_bucket', 1, 2)
           agent.place(2, 'down')
-      else:
-          player.whisper('I don\'t have fuel bucket to place fuel!')
+          count_2 = count_1 - 1
+          if (count_1 == 1):
+            agent.give('air', 1, 1)
+    else:
+        player.whisper('I don\'t have fuel bucket to place fuel!')
   else:
       player.whisper('I can\'t place fuel at this position!')
+
 
