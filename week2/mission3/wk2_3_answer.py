@@ -12,13 +12,13 @@ for i in range(4):
 pickReceiver('right')
 
 agent.move('back')
-placeReceiver('yellow', 'back')
+placeReceiver('gold_block', 'back')
 for i in range(2):
     agent.move('forward')
-placeReceiver('green', 'forward')
+placeReceiver('emerald_block', 'forward')
 for i in range(4):
     agent.move('left')
-placeReceiver('blue', 'forward')
+placeReceiver('lapis_block', 'forward')
 for i in range(2):
     agent.move('back')
-placeReceiver('red', 'back')
+placeReceiver('redstone_block', 'back')
