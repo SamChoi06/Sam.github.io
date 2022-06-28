@@ -20,6 +20,7 @@ def placeFuel():
           agent.give('lava_bucket', 1, 2)
           agent.place(2, 'down')
           count_2 = count_1 - 1
+          agent.give('bucket',count_2,1)
           if (count_1 == 1):
             agent.give('air', 1, 1)
     else:
