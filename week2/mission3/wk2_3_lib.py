@@ -88,7 +88,7 @@ def placeReceiver(color: str, direction: enums.Direction):
   elif color == 'emerald_block':
     if agent.get_item_count(3) > 0:
       agent.place(3, direction)
-      agent.give('air', 1. 3)
+      agent.give('air', 1, 3)
     else:
       player.whisper('I don\'t have green receiver to place!')
   elif color == 'gold_block':
