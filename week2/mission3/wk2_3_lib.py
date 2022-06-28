@@ -74,23 +74,27 @@ def pickReceiver(direction: enums.Direction):
 
 def placeReceiver(color: str, direction: enums.Direction):
   if color == 'redstone_block':
-    if agent.get_item(1) == 'redstone_block':
+    if agent.get_item_count(1) > 0:
       agent.place(1, direction)
+      agent.give('air', 1, 1)
     else:
       player.whisper('I don\'t have red receiver to place!')
   elif color == 'lapis_block':
-    if agent.get_item(2) == 'lapis_block':
+    if agent.get_item_count(2) > 0:
       agent.place(2, direction)
+      agent.give('air', 1, 2)
     else:
       player.whisper('I don\'t have blue receiver to place!')
   elif color == 'emerald_block':
-    if agent.get_item(3) == 'emerald_block':
+    if agent.get_item_count(3) > 0:
       agent.place(3, direction)
+      agent.give('air', 1. 3)
     else:
       player.whisper('I don\'t have green receiver to place!')
   elif color == 'gold_block':
-    if agent.get_item(4) == 'gold_block':
+    if agent.get_item_count(4) > 0:
       agent.place(4, direction)
+      agent.give('air', 1, 4)
     else:
       player.whisper('I don\'t have yellow receiver to place!')
   else:
